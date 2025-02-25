@@ -22,14 +22,20 @@
         color: #333;
       }
 
- 
+      
+      
 
 /* Hero Section */
 .hero {
     background: linear-gradient(100deg, var(--cor-padrao), var(--cor-fundo));
-    padding: 80px 20px;
+    padding: 40px 20px;
     text-align: center;
     color: var(--cor-fonte-p);
+  }
+
+  .hero img {
+    margin-bottom: 25px;
+    width: 140px;
   }
 
   .hero h1 {
