@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Idiomus </title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Início Hero Section -->
+  <section class="hero">
+    <h1>Descubra a Rota da Fluência de Ouvido <br>(ainda em 2024)</h1>
+    <p>Resultado garantido ou seu dinheiro de volta + R$ 500,00</p>
+    <button class="cta-button"><a href="https://idiomus.com/">Quero liberar meu acesso agora</a></button>
+    <div class="compra-segura"><a href="https://idiomus.com/">Compra segura</a></div>
+  </section>
+    <!-- Fim Hero Section -->
+
+
+  <!-- Início Faixa Deslizante -->
+  <div class="faixa-deslizante">
+    <div class="conteudo-deslizante" id="deslizante">
+      <span>ROTA DA FLUÊNCIA</span>
+      <span>|</span>
+      <span>ROTA DA FLUÊNCIA</span>
+      <span>|</span>
+      <span>ROTA DA FLUÊNCIA</span>
+      <span>|</span>
+      <span>ROTA DA FLUÊNCIA</span>
+      <span>|</span>
+      <span>ROTA DA FLUÊNCIA</span>
+      <span>|</span>
+      <span>ROTA DA FLUÊNCIA</span>
+    </div>
+  </div>
+  <!-- Fim Faixa Deslizante -->
+
+  <!-- Início Segunda Dobra -->
+  <section class="segunda-dobra">
+    <h2>Esse ano vai ser diferente…</h2>
+    <p>Provavelmente você falou isso lá em janeiro, estou certo?!</p>
+    <p>E aí os meses vão passando… um após o outro… até que chegamos próximo ao fim de mais um ano e eu te pergunto: como está sua promessa de aprender inglês em 2023?</p>
+    <p>Eu sei, eu sei… trabalho, estudos, família… é difícil conciliar tudo isso e ainda arrumar tempo para o inglês. Porém, preciso ser sincero: nada vai mudar se você não mudar!</p>
+    <p>Mas a boa notícia é que ainda dá tempo de você virar esse jogo…</p><br>
+    <button class="cta-button"><a href="https://idiomus.com/">Liberar meu acesso agora!</a></button>
+  </section>
+  <!-- Fim Segunda Dobra -->
+            
+
+
+    <!-- Aqui inicia nosso Script de animação da faixa deslizante -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const deslizante = document.getElementById('deslizante');
+  
+    // Aqui duplicamos o conteúdo para criar um loop de RODA DA FLUÊNCIA
+    deslizante.innerHTML += deslizante.innerHTML;
+  
+    let position = 0;
+  
+    function animarFaixa() {
+      position -= 1; // Aqui podemos realizar ajustes na velocidade
+      deslizante.style.transform = `translateX(${position}px)`;
+  
+      // Reinicia quando o conteúdo duplicado sai de nossa tela
+      if (Math.abs(position) >= deslizante.scrollWidth / 2) {
+        position = 0;
+      }
+  
+      requestAnimationFrame(animarFaixa);
+    }
+  
+    animarFaixa();
+  });
+    </script>
+    <!-- Fim de nosso Script de animação da faixa deslizante -->
+
+</body>
+</html>
